@@ -11,16 +11,18 @@ import sys
 # The function accepts INTEGER_ARRAY grades as parameter.
 #
 
+
 def gradingStudents(grades):
-    ans = []
+    finalGrade = []
     for grade in grades:
         if grade<38:
-            ans.append(grade)
+            finalGrade.append(grade)
         elif grade%5>2:
-            ans.append(grade+(5-grade%5))
+            finalGrade.append(grade+(5-grade%5))
         else:
-            ans.append(grade)
-    return ans
+            finalGrade.append(grade)
+    return finalGrade
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
